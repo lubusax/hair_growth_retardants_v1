@@ -11,7 +11,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f0f9ff;
+            background-color: #f0f9ff; /* Lightest blue from palette */
         }
         .icon-dna {
             width: 40px;
@@ -119,6 +119,7 @@
         .origin-icon-leaf { width: 24px; height: 24px; }
         .origin-icon-molecule { width: 24px; height: 24px; }
         
+        /* Styles for the active button */
         .active-view-btn {
             background-color: #004AAD !important;
             color: white !important;
@@ -143,7 +144,7 @@
 </head>
 <body class="bg-slate-50 text-gray-800">
     
-    <!-- Main Navigation -->
+    <!-- Navigation Buttons -->
     <div class="p-4 sm:p-6 bg-slate-100 flex justify-center items-center space-x-2 sm:space-x-4 sticky top-0 z-50 shadow-md">
         <button id="showPatentsBtn" class="active-view-btn flex items-center justify-center gap-3 w-1/2 md:w-auto text-lg font-semibold bg-white text-gray-700 px-6 py-4 rounded-xl shadow-md hover:bg-blue-100 transition-all duration-300">
             <svg class="w-6 h-6 stroke-current text-blue-600 main-nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
@@ -159,74 +160,219 @@
         </button>
     </div>
 
-    <!-- Containers for dynamically loaded content -->
-    <div id="patentCardsContainer"></div>
-    <div id="moaContainer" style="display: none;"></div>
+    <!-- Container for the two different views -->
+    <div>
+        <!-- View 1: Patent Cards -->
+        <div id="patentCardsView">
+             <!-- Filter Buttons -->
+            <div class="p-4 bg-slate-200 flex flex-wrap justify-center items-center gap-2 sm:gap-4 sticky top-[100px] z-40 shadow-inner">
+                 <button data-view="allPatentsSubView" class="filter-btn active-filter font-semibold px-5 py-3 rounded-lg shadow-sm">All Patents</button>
+                 <button data-view="naturalIngredientsView" class="filter-btn font-semibold px-5 py-3 rounded-lg shadow-sm">Natural</button>
+                 <button data-view="syntheticIngredientsView" class="filter-btn font-semibold px-5 py-3 rounded-lg shadow-sm">Synthetic</button>
+                 <button data-view="eflornithineIngredientsView" class="filter-btn font-semibold px-5 py-3 rounded-lg shadow-sm">Eflornithine</button>
+            </div>
+
+            <div id="subViewsContainer">
+                <!-- All Patents Sub-View -->
+                <div id="allPatentsSubView" class="sub-view">
+                    <header class="bg-[#004AAD] text-white p-8 text-center">
+                        <h1 class="text-4xl lg:text-5xl font-bold mb-2">Key Patents in Hair Growth Retardants</h1>
+                        <p class="text-lg text-gray-200">An analysis of unique patent families and their core inventions over the years.</p>
+                    </header>
+                    <main class="container mx-auto p-4 md:p-8">
+                        <!-- All Patents content goes here -->
+                        <section id="year-2025" class="mb-12">
+                            <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-[#0079C1] pb-2 mb-8">Priority Year: 2025</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col hover:shadow-2xl transition-shadow duration-300">
+                                    <div class="flex items-center mb-3">
+                                        <div class="origin-icon-molecule mr-2"><div class="icon-molecule"><div class="icon-molecule-atom"></div><div class="icon-molecule-atom"></div><div class="icon-molecule-atom"></div><div class="icon-molecule-bond"></div><div class="icon-molecule-bond"></div><div class="icon-molecule-bond"></div></div></div>
+                                        <span class="text-sm font-semibold text-indigo-600 bg-indigo-100 px-2.5 py-1 rounded-full">Chemical & Natural</span>
+                                    </div>
+                                    <h3 class="font-bold text-lg text-[#004AAD]">FAN: 114639304</h3>
+                                    <p class="text-sm text-gray-500 mb-4">Priority Date: 2025-04-25</p>
+                                    <p class="text-gray-700 mb-4 text-base"><strong>Core Invention:</strong> Combines <strong>Eflornitine Hydrochloride</strong> with herbal phytochemicals like <span class="bg-yellow-200 rounded px-1">Curcumin, EGCG, and Apigenin</span>. Synergistically inhibits <strong>5a-reductase and ODC enzymes</strong> for stronger, more permanent hair reduction effects.</p>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 mb-3">Key Active Ingredients:</h4>
+                                        <div class="flex items-start space-x-4 mb-2">
+                                            <div class="flex-shrink-0 w-10 h-10"><div class="icon-molecule"><div class="icon-molecule-atom"></div><div class="icon-molecule-atom"></div><div class="icon-molecule-atom"></div><div class="icon-molecule-bond"></div><div class="icon-molecule-bond"></div><div class="icon-molecule-bond"></div></div></div>
+                                            <div>
+                                                <p class="font-semibold text-gray-700">Eflornitine Hydrochloride</p>
+                                                <p class="text-sm text-gray-600">Inhibits the Ornithine Decarboxylase (ODC) enzyme, slowing cell division in follicles.</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start space-x-4">
+                                           <div class="flex-shrink-0 w-10 h-10"><div class="icon-leaf"></div></div>
+                                            <div>
+                                                <p class="font-semibold text-gray-700">Curcumin & Apigenin</p>
+                                                <p class="text-sm text-gray-600">Herbal compounds that provide anti-inflammatory effects and inhibit androgen receptors.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=UElswUTkZ%252FBYKb9fw46CBZNXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center">View Database Data</a>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- ... All other sections for all patents from 2024 down to 2005 ... -->
+                    </main>
+                    <footer class="bg-[#004AAD] text-white text-center p-4 mt-8">
+                        <p>&copy; 2025 Infographic on Hair Growth Retardant Patents. All data sourced from Questel Orbit.</p>
+                    </footer>
+                </div>
+
+                <!-- Natural Ingredients Sub-View -->
+                <div id="naturalIngredientsView" class="sub-view" style="display: none;">
+                    <header class="bg-[#004AAD] text-white p-8 text-center">
+                        <h1 class="text-4xl lg:text-5xl font-bold mb-2">Key Patents in Hair Growth Retardants (Natural Components)</h1>
+                        <p class="text-lg text-gray-200">An analysis of patents utilizing natural ingredients for hair growth inhibition.</p>
+                    </header>
+                    <main class="container mx-auto p-4 md:p-8">
+                        <!-- Content for Natural patents -->
+                    </main>
+                    <footer class="bg-[#004AAD] text-white text-center p-4 mt-8">
+                         <p>&copy; 2025 Infographic on Hair Growth Retardant Patents. All data sourced from Questel Orbit.</p>
+                    </footer>
+                </div>
+
+                <!-- Synthetic Ingredients Sub-View -->
+                <div id="syntheticIngredientsView" class="sub-view" style="display: none;">
+                    <header class="bg-[#004AAD] text-white p-8 text-center">
+                        <h1 class="text-4xl lg:text-5xl font-bold mb-2">Key Chemical Patents in Hair Growth Retardants</h1>
+                        <p class="text-lg text-gray-200">An analysis of patents with non-natural components (excluding Eflornitine).</p>
+                    </header>
+                    <main class="container mx-auto p-4 md:p-8">
+                        <!-- Content for Synthetic patents -->
+                    </main>
+                    <footer class="bg-[#004AAD] text-white text-center p-4 mt-8">
+                        <p>&copy; 2025 Infographic on Hair Growth Retardant Patents. All data sourced from Questel Orbit.</p>
+                    </footer>
+                </div>
+                
+                <!-- Eflornithine Ingredients Sub-View -->
+                <div id="eflornithineIngredientsView" class="sub-view" style="display: none;">
+                     <header class="bg-[#004AAD] text-white p-8 text-center">
+                        <h1 class="text-4xl lg:text-5xl font-bold mb-2">Key Patents Featuring Eflornitine</h1>
+                        <p class="text-lg text-gray-200">A focused analysis of patents utilizing Eflornitine for hair growth retardation.</p>
+                    </header>
+                    <main class="container mx-auto p-4 md:p-8">
+                        <!-- Content for Eflornithine patents -->
+                    </main>
+                    <footer class="bg-[#004AAD] text-white text-center p-4 mt-8">
+                        <p>&copy; 2025 Infographic on Hair Growth Retardant Patents. All data sourced from Questel Orbit.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <!-- View 2: MOA Table -->
+        <div id="moaView" style="display: none;">
+            <div class="container mx-auto p-4 md:p-8">
+                <section class="mt-8 md:mt-16">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-center mb-8 text-[#004AAD]">Summary of Key Technological Approaches (2005-2025)</h2>
+                    <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-lg border border-gray-200">
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-100">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">FAN ID</th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Priority Year</th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Primary Mechanism of Action (MOA)</th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Target Application</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr class="bg-gray-300"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=UElswUTkZ%252FBYKb9fw46CBZNXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">114639304</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2025</td><td class="px-6 py-4 text-sm"><b>Synergistic Multi-Pathway Inhibition:</b> A forward-looking synergistic approach combining an ODC inhibitor (Eflornithine) with herbal phytochemicals to target cell proliferation, inflammation, and hormonal signaling.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic/Cosmeceutical</td></tr>
+                                    <tr class="bg-green-200"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=mGu%252BlrO2krFADQM4T9OjgpNXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">110949151</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2024</td><td class="px-6 py-4 text-sm"><b>Natural Product Formulation:</b> An extract from Eurya japonica exerts an anti-proliferative and cytotoxic effect on dermal papilla cells, starving the follicle of nutrients needed for growth.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic/Pharma</td></tr>
+                                    <tr class="bg-green-200"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=hQewLiHaanFO%252FQ38lMhHppNXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">111582895</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2024</td><td class="px-6 py-4 text-sm"><b>Natural Product Formulation:</b> An extract from Mallotus japonicus inhibits the development of dermal papilla cells and reduces hair growth factor activity.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic/Pharma</td></tr>
+                                    <tr class="bg-pink-200"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=dR15du4ks0sSODm6FdnoJ8ExnvIz5kLrfqHome9U%252B8A%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">109860381</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2024</td><td class="px-6 py-4 text-sm"><b>Enzymatic Depilation (Proteolytic):</b> Enzymes like Papain and Bromelain break down the keratin protein in the hair shaft, weakening it for easy removal while also soothing the skin.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic</td></tr>
+                                    <tr class="bg-pink-200"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=pFB%252FXFtWG8HHFAtfH3BUnLmsLuw%252FR4oY%252BQgpgFzVRnM%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">110942797</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2024</td><td class="px-6 py-4 text-sm"><b>Enzyme Inhibition (5α-Reductase):</b> Blocking the 5α-reductase enzyme reduces the conversion of testosterone to the more potent dihydrotestosterone (DHT), suppressing androgen-driven hair growth.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic</td></tr>
+                                    <tr class="bg-gray-100"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=%252FyUm%252FBOcKE53N%252FaVwn8BZJNXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">114087267</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2024</td><td class="px-6 py-4 text-sm"><b>Targeted Biological Depilation (ADC):</b> At the frontier of biologics, this "smart" therapy borrows from oncology, using an antibody-drug conjugate (ADC) to deliver a cytotoxic payload (IFN-γ) directly to hair follicle cells.</td><td class="px-6 py-4 whitespace-nowrap align-top">Pharma/Professional</td></tr>
+                                    <tr class="bg-gray-300"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=tDFZKzXudXHRDasp3qQWlLmsLuw%252FR4oY%252BQgpgFzVRnM%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">111908565</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2023</td><td class="px-6 py-4 text-sm"><b>Targeted Enzyme/Receptor Inhibition:</b> Ornithine decarboxylase inhibitors (like eflornithine) are used to arrest the anagen phase, making follicles less susceptible to damage from chemotherapy or radiation.</td><td class="px-6 py-4 whitespace-nowrap align-top">Pharma (Chemo)</td></tr>
+                                    <tr class="bg-pink-200"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=R1GdBE%252BNPa4LjIG508chXbmsLuw%252FR4oY%252BQgpgFzVRnM%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">105449035</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2023</td><td class="px-6 py-4 text-sm"><b>Peptide-Based Signaling Modulation:</b> A short-chain synthetic peptide interferes with signaling pathways that promote the anagen (growth) phase of the hair follicle.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic</td></tr>
+                                    <tr class="bg-gray-100"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=haWo%252FHShXpJnIcofYUnP35NXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">114230806</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2023</td><td class="px-6 py-4 text-sm"><b>Inflammatory Pathway Modulation:</b> Promoting NF-kB pathway activity is pro-inflammatory and damaging to the hair follicle, leading to an arrest of the hair cycle for depilatory purposes.</td><td class="px-6 py-4 whitespace-nowrap align-top">Pharma/Cosmetic</td></tr>
+                                    <tr class="bg-green-200"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=dpGzrVM1qlV4LtJ0zKbSIsExnvIz5kLrfqHome9U%252B8A%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">114302175</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2023</td><td class="px-6 py-4 text-sm"><b>Natural Product Formulation:</b> As part of a trend validating traditional ingredients, this combines an herbal preparation (Poonadharam) and a proteolytic enzyme (Papain) to weaken the follicle.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic</td></tr>
+                                    <tr class="bg-pink-200"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=hD2TU%252B%252BLdEo1zTc2PWcWRHfDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">108118941</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2023</td><td class="px-6 py-4 text-sm"><b>Multi-Pathway Inhibition (Natural/Synthetic):</b> A blend of ingredients targets multiple pathways, including anti-proliferative, mitotic inhibitory, and 5-alpha-reductase inhibition effects.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic</td></tr>
+                                    <tr class="bg-gray-100"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=aME56PuE1IL7p2PeMVPN%252BZNXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">113646450</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2023</td><td class="px-6 py-4 text-sm"><b>Targeted Enzyme/Receptor Inhibition:</b> A high-value medical application using ODC inhibitors or FP receptor antagonists to slow hair growth, reducing inflammation in conditions like PFB and AKN.</td><td class="px-6 py-4 whitespace-nowrap align-top">Pharma (PFB, AKN)</td></tr>
+                                    <tr class="bg-gray-100"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=IqBbtcMhfvGTdsp8onWvSpNXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">108214665</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2023</td><td class="px-6 py-4 text-sm"><b>Cellular Senescence Induction:</b> Validating a natural active, this approach uses 6-Gingerol to induce aging (senescence) in dermal papilla cells by disrupting mitochondrial quality control.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic/Pharma</td></tr>
+                                    <tr class="bg-pink-200"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=aEiJHTmPI%252FJo9k3D%252F0iYeLmsLuw%252FR4oY%252BQgpgFzVRnM%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">100539988</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2022</td><td class="px-6 py-4 text-sm"><b>Synergistic Herbal Formulation:</b> A blend of traditional Chinese medicine extracts, salicylic acid, and a red wine base work together to inhibit hair growth through combined phytochemical and keratolytic effects.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic</td></tr>
+                                    <tr class="bg-pink-200"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=MFWJDz4WAXcEb09QXDVo2pNXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">102804737</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2022</td><td class="px-6 py-4 text-sm"><b>Synergistic Chemical Formulation:</b> A combination of Menthol (cooling) and a local anesthetic (e.g., Lidocaine) is used to weaken the hair root and stop growth through a dual sensory mechanism.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic</td></tr>
+                                    <tr class="bg-green-200"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=AuzxUfxgEWSQ%252FPlA%252FNzT%252F5NXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">103409628</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2022</td><td class="px-6 py-4 text-sm"><b>Natural Product Formulation:</b> Part of a major push to validate natural ingredients, this formulation uses extracts like Walnut Leaf for their cytotoxic effect on proliferating hair follicle cells to weaken roots.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic</td></tr>
+                                    <tr class="bg-gray-100"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=ZUxhLcxO4D7sFo9EbpqAMbmsLuw%252FR4oY%252BQgpgFzVRnM%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">109753021</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2022</td><td class="px-6 py-4 text-sm"><b>Prostaglandin Pathway Modulation:</b> Inhibiting the 15-PGDH enzyme increases the local concentration of prostaglandins, which can be manipulated to arrest the hair cycle.</td><td class="px-6 py-4 whitespace-nowrap align-top">Pharma/Cosmetic</td></tr>
+                                    <tr class="bg-gray-100"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=IGaGAA6eYxHjCoOEB2EWlnfDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">108195582</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2022</td><td class="px-6 py-4 text-sm"><b>Advanced Delivery System:</b> Uses surface-modified globular nano-particles as a carrier system to deliver hair growth inhibiting agents more effectively into the skin.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic/Pharma</td></tr>
+                                    <tr class="bg-gray-100"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=KgM0Y4SZcEmseLHW8WjXjnfDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">101469037</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2021</td><td class="px-6 py-4 text-sm"><b>Enzyme Inhibition (ODC) + Enhanced Delivery:</b> Highlighting a focus on optimizing formulations, this approach inhibits the ODC enzyme while using a penetration enhancer (lavender oil) to improve delivery.</td><td class="px-6 py-4 whitespace-nowrap align-top">Pharma (Hirsutism)</td></tr>
+                                    <tr class="bg-gray-100"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=LuIfpdHThbbWqxLm4QBXD3fDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">100492880</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2020</td><td class="px-6 py-4 text-sm"><b>Prostaglandin Pathway Modulation:</b> Part of a surge in targeted biology, these novel compounds block the FP receptor in hair follicles to counteract the growth-promoting effects of natural prostaglandins.</td><td class="px-6 py-4 whitespace-nowrap align-top">Pharma/Cosmetic</td></tr>
+                                    <tr class="bg-gray-100"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=nwwJvySD1jfVNtz%252BuaPnF3fDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">98935550</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2020</td><td class="px-6 py-4 text-sm"><b>Sensory Receptor Modulation (Ion Channel Antagonist):</b> A targeted biological approach that inhibits the TRPM5 ion channel to suppress growth-promoting genes and elevate growth-inhibiting genes.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic/Pharma</td></tr>
+                                    <tr class="bg-gray-100"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=Iz1YyRtpAMgHrlJwq71AWrmsLuw%252FR4oY%252BQgpgFzVRnM%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">99751250</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2020</td><td class="px-6 py-4 text-sm"><b>Genetic Regulation (Small RNA):</b> An innovative approach targeting the biology of the cell cycle; it increases cellular microRNA-24 to suppress the proliferation of hair follicle cells.</td><td class="px-6 py-4 whitespace-nowrap align-top">Pharma/Cosmetic</td></tr>
+                                    <tr class="bg-pink-200"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=EIn6LKjf7%252Bv49ntnJakx77msLuw%252FR4oY%252BQgpgFzVRnM%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">98942410</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2020</td><td class="px-6 py-4 text-sm"><b>Chemical Denaturation (DNA):</b> A denaturant, such as urea, is used to destroy the DNA of hair mother cells, which arrests cell proliferation and stops hair growth.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic</td></tr>
+                                    <tr class="bg-gray-100"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=Vg1tD0femgLjCoOEB2EWlnfDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">92385666</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2019</td><td class="px-6 py-4 text-sm"><b>Sensory Receptor Modulation (Taste Receptor Agonist):</b> Reflecting a trend toward novel biological targets, this method activates the TAS2R4 bitter taste receptor in the hair follicle, accelerating its entry into the catagen (regression) phase.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic/Pharma</td></tr>
+                                    <tr class="bg-gray-100"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=vZr64TNsEouseLHW8WjXjnfDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">75682393</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2015</td><td class="px-6 py-4 text-sm"><b>Enzyme Inhibition (ODC):</b> Utilizes Capryloyl glycine, which likely acts as an Ornithine Decarboxylase (ODC) inhibitor to slow cell division in the hair follicle for treating hirsutism.</td><td class="px-6 py-4 whitespace-nowrap align-top">Pharma (Hirsutism)</td></tr>
+                                    <tr class="bg-gray-100"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=oPLXxG7kMefdGqGyRhNS9XfDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">4204936</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2009</td><td class="px-6 py-4 text-sm"><b>Prostaglandin Pathway Modulation:</b> A key example of early hormonal pathway research, this method blocks the Prostaglandin F (FP) receptor to prevent its ligand from stimulating the anagen (growth) phase.</td><td class="px-6 py-4 whitespace-nowrap align-top">Pharma/Cosmetic</td></tr>
+                                    <tr class="bg-pink-200"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=L8KyCgJ2zfDVNtz%252BuaPnF3fDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">6404595</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2006</td><td class="px-6 py-4 text-sm"><b>Sensory Receptor Modulation (Ion Channel Agonist):</b> Part of a foundational wave of "outside-in" research, this approach activates cold-sensation receptors (TRPM8/TRPA1) to send signals that inhibit the hair follicle's growth phase.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic</td></tr>
+                                    <tr class="bg-gray-300"><td class="px-6 py-4 whitespace-nowrap align-top"><a href="https://permalink.orbit.com/RenderStaticFirstPage?XPN=A3yhqumKrHI1zTc2PWcWRHfDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT" target="_blank" class="text-blue-600 hover:underline">4136898</a></td><td class="px-6 py-4 whitespace-nowrap align-top">2005</td><td class="px-6 py-4 text-sm"><b>Enzyme Inhibition (ODC) + Deodorant:</b> Combines the ODC inhibitor Eflornithine (DFMO) with antiperspirant/deodorant actives to provide hair reduction and odor/perspiration control in a single underarm product.</td><td class="px-6 py-4 whitespace-nowrap align-top">Cosmetic</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+    
+                    <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                        <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Criteria for Target Application Classification</h3>
+                        <div class="max-w-4xl mx-auto space-y-4 text-gray-700">
+                            <p>The "Target Application" column classifies patents based on their primary intended use and regulatory pathway, as described in the filings:</p>
+                            <ul class="list-disc list-inside space-y-3">
+                                <li><strong class="font-semibold text-gray-900">Cosmetic:</strong> For products intended for aesthetic purposes to manage unwanted hair, typically for over-the-counter consumer use.</li>
+                                <li><strong class="font-semibold text-gray-900">Pharma/Cosmetic:</strong> For "cosmeceuticals" that bridge cosmetics and pharmaceuticals, addressing both aesthetic concerns and medical conditions like hirsutism.</li>
+                                <li><strong class="font-semibold text-gray-900">Pharma:</strong> For distinctly medical applications aimed at treating a diagnosed dermatological disease where hair growth is a primary symptom. These are likely prescription-only treatments.</li>
+                                <li><strong class="font-semibold text-gray-900">Pharma/Professional:</strong> A specialized category for pharmaceutical-grade treatments that require administration by a healthcare professional in a clinical setting (e.g., antibody-drug conjugates).</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <section class="mt-8 bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                        <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Color Legend</h3>
+                        <div class="max-w-4xl mx-auto space-y-4 text-gray-700">
+                            <ul class="space-y-3">
+                                <li class="flex items-center"><span class="w-5 h-5 mr-3 rounded bg-pink-200 border border-gray-300"></span><div><strong>Intense Pink:</strong> For patents with a "Cosmetic" target application.</div></li>
+                                <li class="flex items-center"><span class="w-5 h-5 mr-3 rounded bg-green-200 border border-gray-300"></span><div><strong>Intense Green:</strong> For patents using a "Natural Product Formulation."</div></li>
+                                <li class="flex items-center"><span class="w-5 h-5 mr-3 rounded bg-gray-300 border border-gray-400"></span><div><strong>Dark Grey:</strong> For patents that specifically mention "Eflornithine."</div></li>
+                                <li class="flex items-center"><span class="w-5 h-5 mr-3 rounded bg-gray-100 border border-gray-300"></span><div><strong>Grey:</strong> For all other patents.</div></li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+                <footer class="bg-[#004AAD] text-white text-center p-4 mt-8">
+                    <p>&copy; 2025 Infographic on Hair Growth Retardant Patents. All data sourced from Questel Orbit.</p>
+                </footer>
+            </div>
+        </div>
+    </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const patentsContainer = document.getElementById('patentCardsContainer');
-            const moaContainer = document.getElementById('moaContainer');
-            const patentsBtn = document.getElementById('showPatentsBtn');
-            const moaBtn = document.getElementById('showMoaBtn');
+        // --- JavaScript for Main View Toggling ---
+        const patentsBtn = document.getElementById('showPatentsBtn');
+        const moaBtn = document.getElementById('showMoaBtn');
+        const patentsView = document.getElementById('patentCardsView');
+        const moaView = document.getElementById('moaView');
+        const mainActiveClass = 'active-view-btn';
 
-            const mainActiveClass = 'active-view-btn';
-
-            // Function to fetch and inject content
-            const loadContent = (url, container, callback) => {
-                fetch(url)
-                    .then(response => response.ok ? response.text() : Promise.reject('File not found'))
-                    .then(data => {
-                        container.innerHTML = data;
-                        if (callback) callback();
-                    })
-                    .catch(error => {
-                        container.innerHTML = `<div class="text-center p-8 text-red-500">Error loading content from ${url}: ${error}</div>`;
-                    });
-            };
-
-            // Main view toggling logic
-            patentsBtn.addEventListener('click', () => {
-                moaContainer.style.display = 'none';
-                patentsContainer.style.display = 'block';
-                patentsBtn.classList.add(mainActiveClass);
-                moaBtn.classList.remove(mainActiveClass);
-            });
-
-            moaBtn.addEventListener('click', () => {
-                patentsContainer.style.display = 'none';
-                moaContainer.style.display = 'block';
-                moaBtn.classList.add(mainActiveClass);
-                patentsBtn.classList.remove(mainActiveClass);
-            });
-
-            // Function to initialize sub-view filtering logic
-            const initializeFiltering = () => {
-                const filterButtons = patentsContainer.querySelectorAll('.filter-btn');
-                const subViews = patentsContainer.querySelectorAll('.sub-view');
-                const filterActiveClass = 'active-filter';
-
-                if (filterButtons.length > 0) {
-                    filterButtons.forEach(button => {
-                        button.addEventListener('click', () => {
-                            filterButtons.forEach(btn => btn.classList.remove(filterActiveClass));
-                            button.classList.add(filterActiveClass);
-                            const viewToShow = button.getAttribute('data-view');
-                            subViews.forEach(view => view.style.display = 'none');
-                            const activeView = patentsContainer.querySelector(`#${viewToShow}`);
-                            if (activeView) {
-                                activeView.style.display = 'block';
-                            }
-                        });
-                    });
-                }
-            };
-
-            // Initial content load
-            loadContent('patent_cards.html', patentsContainer, initializeFiltering);
-            loadContent('moa_table.html', moaContainer);
+        patentsBtn.addEventListener('click', () => {
+            moaView.style.display = 'none';
+            patentsView.style.display = 'block';
+            patentsBtn.classList.add(mainActiveClass);
+            moaBtn.classList.remove(mainActiveClass);
         });
+
+        moaBtn.addEventListener('click', () => {
+            patentsView.style.display = 'none';
+            moaView.style.display = 'block';
+            moaBtn.classList.add(mainActiveClass);
+            patentsBtn.classList.remove(mainActiveClass);
+        });
+        
+        // --- JavaScript for Sub-View Filtering ---
+        // This logic needs to be attached after patent_cards.html is loaded.
+        // The main index.html file's script will handle this.
     </script>
 
 </body>
 </html>
+

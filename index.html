@@ -11,217 +11,295 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f0f9ff; /* Lightest blue from palette */
+            background-color: #f0f9ff;
         }
-        .icon-dna {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-        }
-        .icon-dna div {
-            width: 80%;
-            height: 4px;
-            background-color: #42A5E8;
-            border-radius: 2px;
-            position: relative;
-        }
-        .icon-dna div:nth-child(odd)::before, .icon-dna div:nth-child(even)::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            height: 12px;
-            background-color: #0079C1;
-            top: -4px;
-        }
+        .icon-dna { width: 40px; height: 40px; display: flex; flex-direction: column; justify-content: space-around; align-items: center; }
+        .icon-dna div { width: 80%; height: 4px; background-color: #42A5E8; border-radius: 2px; position: relative; }
+        .icon-dna div:nth-child(odd)::before, .icon-dna div:nth-child(even)::after { content: ''; position: absolute; width: 4px; height: 12px; background-color: #0079C1; top: -4px; }
         .icon-dna div:nth-child(odd)::before { left: 20%; }
         .icon-dna div:nth-child(even)::after { right: 20%; }
-
-        .icon-leaf {
-            width: 40px;
-            height: 40px;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .icon-leaf::before {
-            content: '';
-            width: 24px;
-            height: 24px;
-            background-color: #42A5E8;
-            border-radius: 2px 50%;
-            transform: rotate(45deg);
-        }
-         .icon-leaf::after {
-            content: '';
-            position: absolute;
-            width: 2px;
-            height: 28px;
-            background-color: #0079C1;
-            transform: rotate(-45deg);
-            border-radius: 1px;
-        }
-
-        .icon-molecule {
-            width: 40px;
-            height: 40px;
-            position: relative;
-        }
-        .icon-molecule-atom {
-            position: absolute;
-            width: 14px;
-            height: 14px;
-            background-color: #42A5E8;
-            border-radius: 50%;
-            border: 2px solid #0079C1;
-        }
+        .icon-leaf { width: 40px; height: 40px; position: relative; display: flex; justify-content: center; align-items: center; }
+        .icon-leaf::before { content: ''; width: 24px; height: 24px; background-color: #42A5E8; border-radius: 2px 50%; transform: rotate(45deg); }
+        .icon-leaf::after { content: ''; position: absolute; width: 2px; height: 28px; background-color: #0079C1; transform: rotate(-45deg); border-radius: 1px; }
+        .icon-molecule { width: 40px; height: 40px; position: relative; }
+        .icon-molecule-atom { position: absolute; width: 14px; height: 14px; background-color: #42A5E8; border-radius: 50%; border: 2px solid #0079C1; }
         .icon-molecule-atom:nth-child(1) { top: 0; left: 13px; }
         .icon-molecule-atom:nth-child(2) { bottom: 4px; left: 0; }
         .icon-molecule-atom:nth-child(3) { bottom: 4px; right: 0; }
-        .icon-molecule-bond {
-            position: absolute;
-            height: 2px;
-            background-color: #0079C1;
-            transform-origin: left center;
-        }
+        .icon-molecule-bond { position: absolute; height: 2px; background-color: #0079C1; transform-origin: left center; }
         .icon-molecule-bond:nth-child(4) { width: 16px; top: 15px; left: 7px; transform: rotate(90deg); }
         .icon-molecule-bond:nth-child(5) { width: 16px; top: 22px; left: 7px; transform: rotate(-30deg); }
         .icon-molecule-bond:nth-child(6) { width: 16px; top: 22px; right: 7px; transform: rotate(210deg); }
-        
-        .icon-enzyme {
-            width: 40px;
-            height: 40px;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .icon-enzyme::before {
-            content: '';
-            width: 30px;
-            height: 30px;
-            border: 4px solid #0079C1;
-            border-radius: 50%;
-            border-left-color: transparent;
-            transform: rotate(45deg);
-        }
-         .icon-enzyme::after {
-            content: '';
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            background-color: #42A5E8;
-            border-radius: 3px;
-        }
+        .icon-enzyme { width: 40px; height: 40px; position: relative; display: flex; justify-content: center; align-items: center; }
+        .icon-enzyme::before { content: ''; width: 30px; height: 30px; border: 4px solid #0079C1; border-radius: 50%; border-left-color: transparent; transform: rotate(45deg); }
+        .icon-enzyme::after { content: ''; position: absolute; width: 12px; height: 12px; background-color: #42A5E8; border-radius: 3px; }
         .origin-icon-leaf { width: 24px; height: 24px; }
         .origin-icon-molecule { width: 24px; height: 24px; }
-        
-        /* Styles for the active button */
-        .active-view-btn {
-            background-color: #004AAD !important;
-            color: white !important;
-            box-shadow: 0 4px 14px 0 rgb(0 74 173 / 39%);
-        }
-        .active-view-btn svg.main-nav-icon {
-            stroke: white;
-        }
-        
-        .filter-btn {
-            background-color: #E0F2F1;
-            color: #00796B;
-            transition: all 0.3s;
-        }
-        
-        .filter-btn.active-filter {
-            background-color: #00796B !important;
-            color: white !important;
-            box-shadow: 0 4px 14px 0 rgba(0, 121, 107, 0.39);
-        }
+        .active-view-btn { background-color: #004AAD !important; color: white !important; box-shadow: 0 4px 14px 0 rgb(0 74 173 / 39%); }
+        .active-view-btn svg.main-nav-icon { stroke: white; }
+        .filter-btn { background-color: #E0F2F1; color: #00796B; transition: all 0.3s; }
+        .filter-btn.active-filter { background-color: #00796B !important; color: white !important; box-shadow: 0 4px 14px 0 rgba(0, 121, 107, 0.39); }
     </style>
 </head>
 <body class="bg-slate-50 text-gray-800">
-    <!-- Navigation Buttons -->
+
     <div class="p-4 sm:p-6 bg-slate-100 flex justify-center items-center space-x-2 sm:space-x-4 sticky top-0 z-50 shadow-md">
         <button id="showPatentsBtn" class="active-view-btn flex items-center justify-center gap-3 w-1/2 md:w-auto text-lg font-semibold bg-white text-gray-700 px-6 py-4 rounded-xl shadow-md hover:bg-blue-100 transition-all duration-300">
-            <svg class="w-6 h-6 stroke-current text-blue-600 main-nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            <svg class="w-6 h-6 stroke-current text-blue-600 main-nav-icon" xmlns="http://www.w.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
             </svg>
             <span>Patent Cards</span>
         </button>
         <button id="showMoaBtn" class="flex items-center justify-center gap-3 w-1/2 md:w-auto text-lg font-semibold bg-white text-gray-700 px-6 py-4 rounded-xl shadow-md hover:bg-blue-100 transition-all duration-300">
              <svg class="w-6 h-6 stroke-current text-blue-600 main-nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+               <path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
             </svg>
             <span>MOA</span>
         </button>
     </div>
 
-    <!-- Dynamic Content Containers -->
     <div>
-        <div id="patentCardsContainer"></div>
-        <div id="moaContainer" style="display:none;"></div>
+        <div id="patentCardsView">
+             <div class="p-4 bg-slate-200 flex flex-wrap justify-center items-center gap-2 sm:gap-4 sticky top-[100px] z-40 shadow-inner">
+                <button data-filter="all" class="filter-btn active-filter font-semibold px-5 py-3 rounded-lg shadow-sm">All Patents</button>
+                <button data-filter="natural" class="filter-btn font-semibold px-5 py-3 rounded-lg shadow-sm">Natural</button>
+                <button data-filter="synthetic" class="filter-btn font-semibold px-5 py-3 rounded-lg shadow-sm">Synthetic</button>
+                <button data-filter="eflornithine" class="filter-btn font-semibold px-5 py-3 rounded-lg shadow-sm">Eflornithine</button>
+            </div>
+
+            <header class="bg-[#004AAD] text-white p-8 text-center">
+                <h1 id="patents-header-title" class="text-4xl lg:text-5xl font-bold mb-2">Key Patents in Hair Growth Retardants</h1>
+                <p id="patents-header-subtitle" class="text-lg text-gray-200">An analysis of unique patent families and their core inventions over the years.</p>
+            </header>
+            <main class="container mx-auto p-4 md:p-8">
+                <div id="patents-container"></div>
+            </main>
+            <footer class="bg-[#004AAD] text-white text-center p-4 mt-8">
+                <p>&copy; 2025 Infographic on Hair Growth Retardant Patents. All data sourced from Questel Orbit.</p>
+            </footer>
+        </div>
+
+        <div id="moaView" style="display: none;">
+            <div class="container mx-auto p-4 md:p-8">
+                <section class="mt-8 md:mt-16">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-center mb-8 text-[#004AAD]">Summary of Key Technological Approaches (2005-2025)</h2>
+                    <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-lg border border-gray-200">
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-100">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">FAN ID</th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Priority Year</th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Primary Mechanism of Action (MOA)</th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Target Application</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="moa-table-body" class="divide-y divide-gray-200">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                        <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Criteria for Target Application Classification</h3>
+                        <div class="max-w-4xl mx-auto space-y-4 text-gray-700">
+                            <p>The "Target Application" column classifies patents based on their primary intended use and regulatory pathway, as described in the filings:</p>
+                            <ul class="list-disc list-inside space-y-3">
+                                <li><strong class="font-semibold text-gray-900">Cosmetic:</strong> For products intended for aesthetic purposes to manage unwanted hair, typically for over-the-counter consumer use.</li>
+                                <li><strong class="font-semibold text-gray-900">Pharma/Cosmetic:</strong> For "cosmeceuticals" that bridge cosmetics and pharmaceuticals, addressing both aesthetic concerns and medical conditions like hirsutism.</li>
+                                <li><strong class="font-semibold text-gray-900">Pharma:</strong> For distinctly medical applications aimed at treating a diagnosed dermatological disease where hair growth is a primary symptom. These are likely prescription-only treatments.</li>
+                                <li><strong class="font-semibold text-gray-900">Pharma/Professional:</strong> A specialized category for pharmaceutical-grade treatments that require administration by a healthcare professional in a clinical setting (e.g., antibody-drug conjugates).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <section class="mt-8 bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                        <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Color Legend</h3>
+                        <div class="max-w-4xl mx-auto space-y-4 text-gray-700">
+                            <ul class="space-y-3">
+                                <li class="flex items-center"><span class="w-5 h-5 mr-3 rounded bg-pink-200 border border-gray-300"></span><div><strong>Intense Pink:</strong> For patents with a "Cosmetic" target application.</div></li>
+                                <li class="flex items-center"><span class="w-5 h-5 mr-3 rounded bg-green-200 border border-gray-300"></span><div><strong>Intense Green:</strong> For patents using a "Natural Product Formulation."</div></li>
+                                <li class="flex items-center"><span class="w-5 h-5 mr-3 rounded bg-gray-300 border border-gray-400"></span><div><strong>Dark Grey:</strong> For patents that specifically mention "Eflornithine."</div></li>
+                                <li class="flex items-center"><span class="w-5 h-5 mr-3 rounded bg-gray-100 border border-gray-300"></span><div><strong>Grey:</strong> For all other patents.</div></li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+                <footer class="bg-[#004AAD] text-white text-center p-4 mt-8">
+                    <p>&copy; 2025 Infographic on Hair Growth Retardant Patents. All data sourced from Questel Orbit.</p>
+                </footer>
+            </div>
+        </div>
     </div>
 
     <script>
-    // --- Main View Toggling ---
-    const patentsBtn = document.getElementById('showPatentsBtn');
-    const moaBtn = document.getElementById('showMoaBtn');
-    const patentsContainer = document.getElementById('patentCardsContainer');
-    const moaContainer = document.getElementById('moaContainer');
-    const mainActiveClass = 'active-view-btn';
+        document.addEventListener('DOMContentLoaded', () => {
+            const patentsContainer = document.getElementById('patents-container');
+            const moaTableBody = document.getElementById('moa-table-body');
+            const filterButtons = document.querySelectorAll('.filter-btn');
 
-    function showPatentsView() {
-        moaContainer.style.display = 'none';
-        patentsContainer.style.display = 'block';
-        patentsBtn.classList.add(mainActiveClass);
-        moaBtn.classList.remove(mainActiveClass);
-    }
-    function showMoaView() {
-        patentsContainer.style.display = 'none';
-        moaContainer.style.display = 'block';
-        moaBtn.classList.add(mainActiveClass);
-        patentsBtn.classList.remove(mainActiveClass);
-    }
-    patentsBtn.addEventListener('click', showPatentsView);
-    moaBtn.addEventListener('click', showMoaView);
+            let allPatentsData = []; // To store the fetched patent data
 
-    // --- Dynamic Content Loading ---
-    async function loadMainContent() {
-        // Load patent cards main layout
-        const patentRes = await fetch('patent_cards.html');
-        patentsContainer.innerHTML = await patentRes.text();
-        initializePatentCardFiltering();
+            // --- ICONS ---
+            // Reusable icon HTML strings to avoid repetition
+            const icons = {
+                molecule: `<div class="icon-molecule"><div class="icon-molecule-atom"></div><div class="icon-molecule-atom"></div><div class="icon-molecule-atom"></div><div class="icon-molecule-bond"></div><div class="icon-molecule-bond"></div><div class="icon-molecule-bond"></div></div>`,
+                leaf: `<div class="icon-leaf"></div>`,
+                enzyme: `<div class="icon-enzyme"></div>`,
+                dna: `<div class="icon-dna"><div></div><div></div><div></div><div></div></div>`
+            };
+            const originIcons = {
+                 molecule: `<div class="origin-icon-molecule mr-2">${icons.molecule}</div>`,
+                 leaf: `<div class="origin-icon-leaf mr-2">${icons.leaf}</div>`
+            }
 
-        // Load MOA table
-        const moaRes = await fetch('moa_table.html');
-        moaContainer.innerHTML = await moaRes.text();
-    }
+            // --- DATA FETCHING ---
+            async function loadData() {
+                try {
+                    const [patentsRes, moaRes] = await Promise.all([
+                        fetch('patents.json'),
+                        fetch('moa.json')
+                    ]);
+                    if (!patentsRes.ok || !moaRes.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    const patentsData = await patentsRes.json();
+                    const moaData = await moaRes.json();
 
-    // --- Sub-View Filtering ---
-    function initializePatentCardFiltering() {
-        const filterBtns = patentsContainer.querySelectorAll('.filter-btn');
-        const subViewContentContainer = patentsContainer.querySelector('#subViewContentContainer');
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', async () => {
-                filterBtns.forEach(b => b.classList.remove('active-filter'));
-                btn.classList.add('active-filter');
-                const file = btn.getAttribute('data-file');
-                if (file && subViewContentContainer) {
-                    const res = await fetch(file);
-                    subViewContentContainer.innerHTML = await res.text();
+                    allPatentsData = patentsData; // Store for filtering
+
+                    renderPatents(allPatentsData); // Initial render with all patents
+                    renderMoa(moaData);
+
+                } catch (error) {
+                    console.error('Failed to load data:', error);
+                    patentsContainer.innerHTML = `<p class="text-center text-red-500">Failed to load patent data.</p>`;
+                    moaTableBody.innerHTML = `<tr><td colspan="4" class="text-center text-red-500 py-4">Failed to load MOA data.</td></tr>`;
                 }
-            });
-        });
-        // Optionally, load default sub-view
-        const defaultBtn = patentsContainer.querySelector('.filter-btn.active-filter');
-        if (defaultBtn) defaultBtn.click();
-    }
+            }
 
-    document.addEventListener('DOMContentLoaded', loadMainContent);
+            // --- RENDERING FUNCTIONS ---
+            function renderMoa(moaData) {
+                if (!moaData || moaData.length === 0) {
+                    moaTableBody.innerHTML = `<tr><td colspan="4" class="text-center text-gray-500 py-4">No data available.</td></tr>`;
+                    return;
+                }
+                const tableRowsHtml = moaData.map(item => `
+                    <tr class="${item.colorClass}">
+                        <td class="px-6 py-4 whitespace-nowrap align-top"><a href="${item.link}" target="_blank" class="text-blue-600 hover:underline">${item.fanId}</a></td>
+                        <td class="px-6 py-4 whitespace-nowrap align-top">${item.year}</td>
+                        <td class="px-6 py-4 text-sm">${item.moa}</td>
+                        <td class="px-6 py-4 whitespace-nowrap align-top">${item.application}</td>
+                    </tr>
+                `).join('');
+                moaTableBody.innerHTML = tableRowsHtml;
+            }
+
+            function renderPatents(patentsToRender) {
+                if (!patentsToRender || patentsToRender.length === 0) {
+                    patentsContainer.innerHTML = `<p class="text-center text-gray-500 mt-8 text-lg">No patents match the selected filter.</p>`;
+                    return;
+                }
+
+                // Group patents by year
+                const patentsByYear = patentsToRender.reduce((acc, patent) => {
+                    const year = patent.year;
+                    if (!acc[year]) {
+                        acc[year] = [];
+                    }
+                    acc[year].push(patent);
+                    return acc;
+                }, {});
+
+                // Sort years in descending order
+                const sortedYears = Object.keys(patentsByYear).sort((a, b) => b - a);
+
+                const patentsHtml = sortedYears.map(year => {
+                    const cardsHtml = patentsByYear[year].map(patent => {
+                        const ingredientsHtml = patent.ingredients.map(ing => `
+                            <div class="flex items-start space-x-4 mb-2">
+                                <div class="flex-shrink-0 w-10 h-10">${icons[ing.type] || ''}</div>
+                                <div>
+                                    <p class="font-semibold text-gray-700">${ing.name}</p>
+                                    <p class="text-sm text-gray-600">${ing.description}</p>
+                                </div>
+                            </div>
+                        `).join('');
+
+                        return `
+                            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col hover:shadow-2xl transition-shadow duration-300">
+                                <div class="flex items-center mb-3">
+                                    ${originIcons[patent.originIcon] || ''}
+                                    <span class="text-sm font-semibold text-indigo-600 bg-indigo-100 px-2.5 py-1 rounded-full">${patent.categoryDisplay}</span>
+                                </div>
+                                <h3 class="font-bold text-lg text-[#004AAD]">${patent.fanId}</h3>
+                                <p class="text-sm text-gray-500 mb-4">Priority Date: ${patent.priorityDate}</p>
+                                <p class="text-gray-700 mb-4 text-base flex-grow"><strong>Core Invention:</strong> ${patent.coreInvention}</p>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-3">Key Active Ingredients:</h4>
+                                    ${ingredientsHtml}
+                                </div>
+                                <a href="${patent.link}" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center">View Database Data</a>
+                            </div>`;
+                    }).join('');
+
+                    return `
+                        <section class="mb-12">
+                            <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-[#0079C1] pb-2 mb-8">Priority Year: ${year}</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">${cardsHtml}</div>
+                        </section>`;
+                }).join('');
+
+                patentsContainer.innerHTML = patentsHtml;
+            }
+
+
+            // --- EVENT LISTENERS ---
+            // Main View Toggling
+            const patentsBtn = document.getElementById('showPatentsBtn');
+            const moaBtn = document.getElementById('showMoaBtn');
+            const patentsView = document.getElementById('patentCardsView');
+            const moaView = document.getElementById('moaView');
+            const mainActiveClass = 'active-view-btn';
+
+            patentsBtn.addEventListener('click', () => {
+                moaView.style.display = 'none';
+                patentsView.style.display = 'block';
+                patentsBtn.classList.add(mainActiveClass);
+                moaBtn.classList.remove(mainActiveClass);
+            });
+
+            moaBtn.addEventListener('click', () => {
+                patentsView.style.display = 'none';
+                moaView.style.display = 'block';
+                moaBtn.classList.add(mainActiveClass);
+                patentsBtn.classList.remove(mainActiveClass);
+            });
+
+            // Patent Filter Button Logic
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const currentFilter = button.dataset.filter;
+
+                    // Update button styles
+                    filterButtons.forEach(btn => btn.classList.remove('active-filter'));
+                    button.classList.add('active-filter');
+
+                    // Filter and render patents
+                    let filteredPatents;
+                    if (currentFilter === 'all') {
+                        filteredPatents = allPatentsData;
+                    } else {
+                        filteredPatents = allPatentsData.filter(patent => patent.categories.includes(currentFilter));
+                    }
+                    renderPatents(filteredPatents);
+                });
+            });
+
+            // --- INITIALIZATION ---
+            loadData();
+        });
     </script>
+
 </body>
 </html>
-

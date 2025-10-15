@@ -1,0 +1,80 @@
+[
+  {
+    "year": 2025,
+    "fanId": "FAN: 114639304",
+    "priorityDate": "2025-04-25",
+    "categories": ["synthetic", "natural", "eflornithine"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical & Natural",
+    "coreInvention": "Combines <strong>Eflornithine Hydrochloride</strong> with herbal phytochemicals like <span class='bg-yellow-200 rounded px-1'>Curcumin, EGCG, and Apigenin</span>. Synergistically inhibits <strong>5a-reductase and ODC enzymes</strong> for stronger, more permanent hair reduction effects.",
+    "ingredients": [
+      {
+        "name": "Eflornithine Hydrochloride",
+        "description": "Inhibits the Ornithine Decarboxylase (ODC) enzyme, slowing cell division in follicles.",
+        "type": "molecule"
+      },
+      {
+        "name": "Curcumin & Apigenin",
+        "description": "Herbal compounds that provide anti-inflammatory effects and inhibit androgen receptors.",
+        "type": "leaf"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=UElswUTkZ%252FBYKb9fw46CBZNXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2024,
+    "fanId": "FAN: 110949151",
+    "priorityDate": "2024-03-15",
+    "categories": ["natural"],
+    "originIcon": "leaf",
+    "categoryDisplay": "Natural",
+    "coreInvention": "An extract from <strong>Eurya japonica</strong> exerts an anti-proliferative and cytotoxic effect on dermal papilla cells, starving the follicle of nutrients needed for growth.",
+    "ingredients": [
+      {
+        "name": "Eurya Japonica Extract",
+        "description": "Natural plant extract that has cytotoxic effects on dermal papilla cells.",
+        "type": "leaf"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=mGu%252BlrO2krFADQM4T9OjgpNXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2023,
+    "fanId": "FAN: 111908565",
+    "priorityDate": "2023-08-20",
+    "categories": ["synthetic", "eflornithine"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Synthetic",
+    "coreInvention": "Utilizes <strong>Ornithine decarboxylase inhibitors</strong> (like eflornithine) to arrest the anagen phase, making follicles less susceptible to damage from chemotherapy or radiation.",
+    "ingredients": [
+      {
+        "name": "ODC Inhibitors (Eflornithine)",
+        "description": "Arrests the anagen (growth) phase of the hair cycle.",
+        "type": "molecule"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=tDFZKzXudXHRDasp3qQWlLmsLuw%252FR4oY%252BQgpgFzVRnM%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2022,
+    "fanId": "FAN: 100539988",
+    "priorityDate": "2022-05-10",
+    "categories": ["synthetic", "natural"],
+    "originIcon": "leaf",
+    "categoryDisplay": "Herbal & Chemical",
+    "coreInvention": "A synergistic blend of traditional Chinese medicine extracts, <strong>salicylic acid</strong>, and a red wine base work together to inhibit hair growth through combined phytochemical and keratolytic effects.",
+    "ingredients": [
+      {
+        "name": "TCM Extracts & Wine Base",
+        "description": "Provides a base of phytochemicals to inhibit hair growth signals.",
+        "type": "leaf"
+      },
+      {
+        "name": "Salicylic Acid",
+        "description": "A beta-hydroxy acid that provides keratolytic (exfoliating) effects.",
+        "type": "molecule"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=aEiJHTmPI%252FJo9k3D%252F0iYeLmsLuw%252FR4oY%252BQgpgFzVRnM%3D%26n%3D1&id=0&base=FAMPAT"
+  }
+]

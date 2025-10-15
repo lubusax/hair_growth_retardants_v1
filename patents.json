@@ -23,6 +23,62 @@
   },
   {
     "year": 2024,
+    "fanId": "FAN: 114087267",
+    "priorityDate": "2024-12-31",
+    "categories": ["synthetic"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical",
+    "coreInvention": "A novel depilatory compound created by conjugating <strong>Interferon IFNγ</strong> with an <strong>antibody that targets hair follicle stem cells</strong> or hair bulbs. This targeted delivery <span class='bg-yellow-200 rounded px-1'>breaks the follicle's immune tolerance</span>, leading to immune-mediated hair removal.",
+    "ingredients": [
+      {
+        "name": "Interferon IFNγ-Antibody Conjugate",
+        "description": "Targets hair follicles and induces an immune response to achieve temporary or permanent depilation.",
+        "type": "molecule"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=%252FyUm%252FBOcKE53N%252FaVwn8BZJNXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2024,
+    "fanId": "FAN: 110942797",
+    "priorityDate": "2024-05-16",
+    "categories": ["natural"],
+    "originIcon": "leaf",
+    "categoryDisplay": "Natural",
+    "coreInvention": "A skin cosmetic composition featuring <strong>marquain</strong>, a compound found in extracts like Sophora Flavescens (Kujin). It <span class='bg-yellow-200 rounded px-1'>inhibits the testosterone 5α-reductase enzyme</span>, effectively suppressing the hormonal trigger for hair growth.",
+    "ingredients": [
+      {
+        "name": "Marquain",
+        "description": "Inhibits the testosterone 5α-reductase enzyme to reduce hair growth promotion.",
+        "type": "molecule"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=pFB%252FXFtWG8HHFAtfH3BUnLmsLuw%252FR4oY%252BQgpgFzVRnM%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2024,
+    "fanId": "FAN: 109860381",
+    "priorityDate": "2024-05-09",
+    "categories": ["natural"],
+    "originIcon": "leaf",
+    "categoryDisplay": "Natural",
+    "coreInvention": "An herbal depilatory gel peel-off mask formulated with <strong>papain</strong> and <strong>bromelain</strong> as key ingredients. These proteolytic enzymes <span class='bg-yellow-200 rounded px-1'>break down hair proteins</span> and weaken the follicle for gentle, effective hair removal.",
+    "ingredients": [
+      {
+        "name": "Papain",
+        "description": "A proteolytic enzyme from papaya that disintegrates the hair cuticle.",
+        "type": "enzyme"
+      },
+      {
+        "name": "Bromelain",
+        "description": "An enzyme from pineapple that acts as a natural exfoliant and helps soften hair.",
+        "type": "enzyme"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=dR15du4ks0sSODm6FdnoJ8ExnvIz5kLrfqHome9U%252B8A%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2024,
     "fanId": "FAN: 110949151",
     "priorityDate": "2024-03-15",
     "categories": ["natural"],
@@ -37,6 +93,123 @@
       }
     ],
     "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=mGu%252BlrO2krFADQM4T9OjgpNXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2024,
+    "fanId": "FAN: 111582895",
+    "priorityDate": "2024-01-24",
+    "categories": ["natural"],
+    "originIcon": "leaf",
+    "categoryDisplay": "Natural",
+    "coreInvention": "Features <strong>Mallotus Japonicus extract</strong> for hair inhibition. <span class='bg-yellow-200 rounded px-1'>Suppresses dermal papilla cells</span>. Reduces <strong>alkaline phosphatase (ALP)</strong> activity. Safe and effective for cosmetic and medicinal applications.",
+    "ingredients": [
+      {
+        "name": "Mallotus Japonicus Extract",
+        "description": "Suppresses dermal papilla cell development to inhibit hair growth.",
+        "type": "leaf"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=hQewLiHaanFO%252FQ38lMhHppNXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2023,
+    "fanId": "FAN: 108214665",
+    "priorityDate": "2023-11-24",
+    "categories": ["natural"],
+    "originIcon": "leaf",
+    "categoryDisplay": "Natural",
+    "coreInvention": "Application of <strong>6-gingerol</strong> to promote aging of hair follicle mastoid cells. It inhibits mitochondrial autophagy by regulating <span class='bg-yellow-200 rounded px-1'>LncRNA H19 in exosomes</span>, leading to reduced hair follicle cell proliferation and inhibited hair growth.",
+    "ingredients": [
+      {
+        "name": "6-Gingerol",
+        "description": "Promotes aging and apoptosis in hair follicle cells by modulating miRNA pathways.",
+        "type": "molecule"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=IqBbtcMhfvGTdsp8onWvSpNXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2023,
+    "fanId": "FAN: 108118941",
+    "priorityDate": "2023-11-23",
+    "categories": ["synthetic", "natural"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical & Natural",
+    "coreInvention": "Multi-functional composition for <strong>underarm care</strong>. <span class='bg-yellow-200 rounded px-1'>Retards hair growth, brightens skin, controls odor</span>. Combines <strong>hair growth retardants</strong> with <strong>exfoliating acids</strong> (AHA/BHA/PHA). 3-in-1 solution.",
+    "ingredients": [
+      {
+        "name": "Gymnemic Acid, Larrea Divaricata Extract",
+        "description": "Natural extracts that act as hair growth retardants.",
+        "type": "leaf"
+      },
+      {
+        "name": "AHA/BHA/PHA",
+        "description": "Exfoliate skin, prevent ingrown hairs, and inhibit odor-causing bacteria.",
+        "type": "molecule"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=hD2TU%252B%252BLdEo1zTc2PWcWRHfDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2023,
+    "fanId": "FAN: 114302175",
+    "priorityDate": "2023-10-16",
+    "categories": ["natural"],
+    "originIcon": "leaf",
+    "categoryDisplay": "Natural",
+    "coreInvention": "Herbal gel for <strong>permanent facial hair removal</strong>. Uses a natural blend including <strong>Poonadharam, Papaya, Aloe, and Turmeric</strong>. The formulation <span class='bg-yellow-200 rounded px-1'>inhibits future hair growth</span> while soothing the skin, offering a painless and non-irritating alternative to conventional methods.",
+    "ingredients": [
+      {
+        "name": "Poonadharam & Papain",
+        "description": "Acts as a natural hair remover by affecting hair follicles and slowing down regrowth.",
+        "type": "enzyme"
+      },
+      {
+        "name": "Aloe Vera & Turmeric",
+        "description": "Provide anti-inflammatory and soothing properties to the skin after hair removal.",
+        "type": "leaf"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=dpGzrVM1qlV4LtJ0zKbSIsExnvIz5kLrfqHome9U%252B8A%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2023,
+    "fanId": "FAN: 114230806",
+    "priorityDate": "2023-10-10",
+    "categories": ["synthetic"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical",
+    "coreInvention": "Modulates hair follicle growth and damage via the <strong>NF-kB signaling pathway</strong>. An <span class='bg-yellow-200 rounded px-1'>NF-kB activity or expression promoter</span> is used as the active ingredient in a pharmaceutical or cosmetic composition for depilatory purposes.",
+    "ingredients": [
+      {
+        "name": "NF-kB Promoter",
+        "description": "Activates the NF-kB pathway, which can lead to hair follicle damage and hair removal.",
+        "type": "dna"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=haWo%252FHShXpJnIcofYUnP35NXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2023,
+    "fanId": "FAN: 113646450",
+    "priorityDate": "2023-08-31",
+    "categories": ["synthetic", "eflornithine"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical",
+    "coreInvention": "Treats inflammatory skin conditions like <strong>PFB, AKN, and HS</strong> by inhibiting hair growth. Uses <strong>FP receptor antagonists</strong> or <span class='bg-yellow-200 rounded px-1'>ornithine decarboxylase inhibitors</span> to reduce hair diameter and growth, alleviating the conditions.",
+    "ingredients": [
+      {
+        "name": "FP Receptor Antagonists",
+        "description": "Block prostaglandin signals to inhibit hair growth and reduce inflammation.",
+        "type": "molecule"
+      },
+      {
+        "name": "Eflornithine Hydrochloride",
+        "description": "Inhibits the ODC enzyme to slow hair growth and reduce follicle-related inflammation.",
+        "type": "enzyme"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=aME56PuE1IL7p2PeMVPN%252BZNXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT"
   },
   {
     "year": 2023,
@@ -54,6 +227,79 @@
       }
     ],
     "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=tDFZKzXudXHRDasp3qQWlLmsLuw%252FR4oY%252BQgpgFzVRnM%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2023,
+    "fanId": "FAN: 105449035",
+    "priorityDate": "2023-04-20",
+    "categories": ["synthetic"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical",
+    "coreInvention": "A composition containing synthetic <strong>peptides</strong> designed to enhance or repair the skin barrier. While primarily for anti-aging, the peptides also have properties that can be used to <span class='bg-yellow-200 rounded px-1'>inhibit or delay hair growth</span>.",
+    "ingredients": [
+      {
+        "name": "Synthetic Peptides",
+        "description": "Peptide sequences such as Palm-Gly-Nle-Lys-Leu-Tyr-NH2 that modulate cell activity to delay hair growth.",
+        "type": "molecule"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=R1GdBE%252BNPa4LjIG508chXbmsLuw%252FR4oY%252BQgpgFzVRnM%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2022,
+    "fanId": "FAN: 109753021",
+    "priorityDate": "2022-11-14",
+    "categories": ["synthetic"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical",
+    "coreInvention": "A heterocyclic compound that acts as a <strong>15-PGDH inhibitor</strong>. By inhibiting the 15-hydroxyprostaglandin dehydrogenase enzyme, it increases local prostaglandin levels, which can be used to modulate biological processes, including <span class='bg-yellow-200 rounded px-1'>hair growth</span>.",
+    "ingredients": [
+      {
+        "name": "15-PGDH Inhibitor",
+        "description": "Inhibits the enzyme that degrades prostaglandins, thereby influencing the hair growth cycle.",
+        "type": "enzyme"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=ZUxhLcxO4D7sFo9EbpqAMbmsLuw%252FR4oY%252BQgpgFzVRnM%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2022,
+    "fanId": "FAN: 103409628",
+    "priorityDate": "2022-09-02",
+    "categories": ["natural"],
+    "originIcon": "leaf",
+    "categoryDisplay": "Natural",
+    "coreInvention": "A natural ingredient mixture that reduces hair growth on the human body. The core of the invention is a blend of <strong>walnut leaf, orange peel, and lemon peel extracts</strong>, which provide both <span class='bg-yellow-200 rounded px-1'>hair removal and skin care benefits</span>.",
+    "ingredients": [
+      {
+        "name": "Walnut, Orange, & Lemon Extracts",
+        "description": "Work synergistically to reduce hair and care for the skin.",
+        "type": "leaf"
+      },
+      {
+        "name": "Turmeric Powder",
+        "description": "Provides additional skin care benefits.",
+        "type": "leaf"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=AuzxUfxgEWSQ%252FPlA%252FNzT%252F5NXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2022,
+    "fanId": "FAN: 108195582",
+    "priorityDate": "2022-07-13",
+    "categories": ["synthetic"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical",
+    "coreInvention": "A composition of <strong>core-shell nano-elements</strong> for skin delivery. The core comprises a <strong>collagen-synthesis stimulating compound (CSSC)</strong> and is surrounded by a fatty amine shell. This system can be used to deliver active agents for various effects, including <span class='bg-yellow-200 rounded px-1'>inhibiting hair growth</span>.",
+    "ingredients": [
+      {
+        "name": "Surface Modified Nano-Particles",
+        "description": "Encapsulate and deliver active ingredients (like CSSCs) deep into the skin to modulate hair growth.",
+        "type": "molecule"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=IGaGAA6eYxHjCoOEB2EWlnfDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT"
   },
   {
     "year": 2022,
@@ -76,5 +322,222 @@
       }
     ],
     "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=aEiJHTmPI%252FJo9k3D%252F0iYeLmsLuw%252FR4oY%252BQgpgFzVRnM%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2022,
+    "fanId": "FAN: 102804737",
+    "priorityDate": "2022-04-14",
+    "categories": ["synthetic", "natural"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical",
+    "coreInvention": "Dermatological preparation to <strong>prevent hair regrowth</strong>. Combines <strong>menthol</strong> and a <strong>local anesthetic</strong> (e.g., Lidocaine). Creates a <span class='bg-yellow-200 rounded px-1'>synergistic cooling and numbing effect</span> to weaken hair roots.",
+    "ingredients": [
+      {
+        "name": "Menthol",
+        "description": "Provides a cooling effect that weakens the hair root.",
+        "type": "leaf"
+      },
+      {
+        "name": "Local Anesthetics",
+        "description": "Work in synergy with menthol to numb the area and further inhibit hair root function.",
+        "type": "molecule"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=MFWJDz4WAXcEb09QXDVo2pNXe7dphUsu7KxJINoFg8I%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2021,
+    "fanId": "FAN: 101469037",
+    "priorityDate": "2021-02-20",
+    "categories": ["synthetic", "natural", "eflornithine"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical & Natural",
+    "coreInvention": "Topical cream with <strong>eflornithine hydrochloride</strong>. Enhanced with <strong>lavender oil</strong> as a <span class='bg-yellow-200 rounded px-1'>penetration enhancer</span>. Improves drug delivery to the hair follicle. More potent inhibition of <strong>ornithine decarboxylase (ODC)</strong> for better hair reduction.",
+    "ingredients": [
+      {
+        "name": "Eflornithine Hydrochloride",
+        "description": "An irreversible inhibitor of ornithine decarboxylase (ODC), which slows down hair regrowth.",
+        "type": "molecule"
+      },
+      {
+        "name": "Lavender Oil",
+        "description": "Acts as a penetration enhancer, helping the active ingredient to reach the hair follicle more effectively.",
+        "type": "leaf"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=KgM0Y4SZcEmseLHW8WjXjnfDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2020,
+    "fanId": "FAN: 100492880",
+    "priorityDate": "2020-12-11",
+    "categories": ["synthetic"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical",
+    "coreInvention": "Inhibits hair growth via <strong>FP receptor antagonists</strong>. <span class='bg-yellow-200 rounded px-1'>Blocks Prostaglandin F receptors</span> to slow or stop hair growth. Treats <strong>hirsutism & hypertrichosis</strong>. Also helps prevent chemo/radiation-induced hair loss.",
+    "ingredients": [
+      {
+        "name": "FP Receptor Antagonists",
+        "description": "Compounds that block the prostaglandin F receptor to inhibit hair growth signals.",
+        "type": "molecule"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=LuIfpdHThbbWqxLm4QBXD3fDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2020,
+    "fanId": "FAN: 99751250",
+    "priorityDate": "2020-10-16",
+    "categories": ["synthetic"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical",
+    "coreInvention": "Uses endogenous small RNA <strong>miR-24</strong> to regulate hair growth. <span class='bg-yellow-200 rounded px-1'>Promoting or agonizing miR-24 inhibits hair growth</span>, while inhibiting it promotes growth. Offers a new molecular target for hair modulation.",
+    "ingredients": [
+      {
+        "name": "miR-24 Agonists/Promoters",
+        "description": "Upregulating miR-24 expression inhibits skin and hair regeneration, providing a method for hair growth reduction.",
+        "type": "dna"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=Iz1YyRtpAMgHrlJwq71AWrmsLuw%252FR4oY%252BQgpgFzVRnM%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2020,
+    "fanId": "FAN: 98935550",
+    "priorityDate": "2020-08-28",
+    "categories": ["synthetic"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical",
+    "coreInvention": "Regulates hair growth by modulating the <strong>TRPM5 ion channel</strong>. <strong>Antagonists</strong> like <strong>triphenylphosphine oxide (TPPO)</strong> <span class='bg-yellow-200 rounded px-1'>inhibit hair growth</span> by promoting catagen. A novel mechanism for hair cycle control.",
+    "ingredients": [
+      {
+        "name": "Triphenylphosphine Oxide (TPPO)",
+        "description": "An antagonist of the TRPM5 ion channel that promotes the regression phase of the hair cycle.",
+        "type": "molecule"
+      },
+      {
+        "name": "siRNA targeting TRPM5",
+        "description": "Reduces cell proliferation in the hair matrix, leading to hair growth inhibition.",
+        "type": "dna"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=nwwJvySD1jfVNtz%252BuaPnF3fDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2020,
+    "fanId": "FAN: 98942410",
+    "priorityDate": "2020-08-21",
+    "categories": ["synthetic"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical",
+    "coreInvention": "A depilatory agent using an <strong>alkaline denaturant</strong> (like urea) to <span class='bg-yellow-200 rounded px-1'>destroy the DNA of hair mother cells</span>. The denaturant separates the DNA's double helix, halting cell replication. <strong>Liposomes</strong> are used for targeted delivery.",
+    "ingredients": [
+      {
+        "name": "Alkaline Denaturant (e.g., Urea)",
+        "description": "Separates DNA strands in hair mother cells, preventing replication and growth.",
+        "type": "molecule"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=EIn6LKjf7%252Bv49ntnJakx77msLuw%252FR4oY%252BQgpgFzVRnM%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2019,
+    "fanId": "FAN: 92385666",
+    "priorityDate": "2019-07-17",
+    "categories": ["natural"],
+    "originIcon": "leaf",
+    "categoryDisplay": "Natural",
+    "coreInvention": "Modulates hair growth via the <strong>taste receptor TAS2R4</strong> in follicles. <strong>Agonists</strong> like <strong>Stevioside & Rebaudioside A</strong> <span class='bg-yellow-200 rounded px-1'>inhibit hair growth</span> by activating the receptor and promoting the catagen (resting) phase.",
+    "ingredients": [
+      {
+        "name": "Rebaudioside A, Stevioside",
+        "description": "Activate TAS2R4, pushing follicles into the resting stage to inhibit growth.",
+        "type": "leaf"
+      },
+      {
+        "name": "L-Tryptophan",
+        "description": "Also promotes the catagen stage and reduces hair matrix keratinocyte proliferation.",
+        "type": "molecule"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=Vg1tD0femgLjCoOEB2EWlnfDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2015,
+    "fanId": "FAN: 75682393",
+    "priorityDate": "2015-09-17",
+    "categories": ["synthetic"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical",
+    "coreInvention": "Uses <strong>capryloyl glycine</strong> in topical compositions for hirsutism. <span class='bg-yellow-200 rounded px-1'>Inhibits unwanted hair growth</span>, particularly on the face. Likely works by inhibiting the <strong>ornithine decarboxylase enzyme</strong>.",
+    "ingredients": [
+      {
+        "name": "Capryloyl Glycine",
+        "description": "A lipoaminoacid that inhibits hair growth, likely by inhibiting the ornithine decarboxylase enzyme.",
+        "type": "molecule"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=vZr64TNsEouseLHW8WjXjnfDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2009,
+    "fanId": "FAN: 4204936",
+    "priorityDate": "2009-07-29",
+    "categories": ["synthetic"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical",
+    "coreInvention": "Employs <strong>Prostaglandin F2α (PGF2α) analogs</strong> as <strong>FP receptor antagonists</strong>. <span class='bg-yellow-200 rounded px-1'>Blocks the receptor to inhibit hair growth signals</span>. Treats hirsutism and prevents regrowth. Also applicable for chemo-related hair loss.",
+    "ingredients": [
+      {
+        "name": "PGF2α Analogs",
+        "description": "Act as FP receptor antagonists, blocking signals that promote hair growth.",
+        "type": "molecule"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=oPLXxG7kMefdGqGyRhNS9XfDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2006,
+    "fanId": "FAN: 6404595",
+    "priorityDate": "2006-02-28",
+    "categories": ["synthetic", "natural"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical",
+    "coreInvention": "Reduces hair growth with <strong>cold receptor agonists</strong> (TRPM8/TRPA1). Compounds like <strong>menthol and eugenol</strong> create a <span class='bg-yellow-200 rounded px-1'>\"cooling\" sensation that inhibits follicle activity</span>. Can be combined with other hair removal methods.",
+    "ingredients": [
+      {
+        "name": "Menthol and Menthyl Lactate",
+        "description": "Cyclic terpenes that act as TRPM8 agonists, creating a cooling effect that inhibits hair growth.",
+        "type": "leaf"
+      },
+      {
+        "name": "Icilin and Eugenol",
+        "description": "Agonists that activate both TRPM8 and TRPA1 receptors to reduce hair growth.",
+        "type": "leaf"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=L8KyCgJ2zfDVNtz%252BuaPnF3fDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT"
+  },
+  {
+    "year": 2005,
+    "fanId": "FAN: 4136898",
+    "priorityDate": "2005-09-13",
+    "categories": ["synthetic", "eflornithine"],
+    "originIcon": "molecule",
+    "categoryDisplay": "Chemical",
+    "coreInvention": "A 2-in-1 composition for underarm use. Combines hair inhibitor <strong>α-difluoromethylornithine (DFMO)</strong> with an <strong>antiperspirant/deodorant</strong>. <span class='bg-yellow-200 rounded px-1'>Reduces hair growth while controlling sweat and odor</span> in a single product.",
+    "ingredients": [
+      {
+        "name": "α-Difluoromethylornithine (DFMO)",
+        "description": "An ornithine decarboxylase inhibitor that reduces the rate of hair growth.",
+        "type": "molecule"
+      },
+      {
+        "name": "Antiperspirant Salts & Deodorant Actives",
+        "description": "Control perspiration and inhibit odor-causing bacteria.",
+        "type": "molecule"
+      }
+    ],
+    "link": "https://permalink.orbit.com/RenderStaticFirstPage?XPN=A3yhqumKrHI1zTc2PWcWRHfDUqlXTJ5uwQdFuycu4uk%3D%26n%3D1&id=0&base=FAMPAT"
   }
 ]
